@@ -12,5 +12,5 @@ export default async function handler(request, response) {
   }
 
   const pets = await client.sql`SELECT * FROM Pets;`;
-  return response.status(200).json({ pets: pets.rows });
+  return response.status(200).json({ pets });
 }
